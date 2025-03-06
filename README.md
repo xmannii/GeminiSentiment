@@ -30,7 +30,7 @@
 
 1. کلون کردن ریپو:
 ```bash
-git clone https://github.com/your-username/sentiment-analysis-app.git
+git clone https://github.com/xmannii/GeminiSentiment
 cd sentiment-analysis-app
 ```
 
