@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎯 تحلیل احساسات متن با هوش مصنوعی
 
-## Getting Started
+<div dir="rtl">
 
-First, run the development server:
+## 👋 معرفی
+این پروژه یک اپلیکیشن تحت وب باحال برای تحلیل احساسات متن‌های فارسی با استفاده از هوش مصنوعی است. کاربران می‌تونن متن خودشون رو وارد کنن و نتایج تحلیل احساسات (مثبت 😊، منفی ☹️ یا خنثی 😐) رو به همراه عبارات کلیدی و توضیحات دریافت کنن.
 
+## ✨ ویژگی‌ها
+- 🔍 تحلیل احساسات متن‌های فارسی
+- 📊 نمایش میزان اطمینان تحلیل
+- 🎯 استخراج عبارات کلیدی از متن
+- 💅 رابط کاربری مدرن با کمک ShadcnUi
+- 🎮 پشتیبانی از نمونه‌های آماده برای تست سریع
+
+## 🛠️ تکنولوژی‌های استفاده شده
+- **Next.js** ⚡: فریم‌ورک React برای توسعه وب
+- **Vercel AI SDK** 🤖: برای ارتباط با مدل‌های هوش مصنوعی
+- **Google Gemini 2.0 Flash** 🧠: مدل هوش مصنوعی مولد برای تحلیل متن
+- **Structured Output** 📝: خروجی ساختاریافته برای پردازش دقیق نتایج
+- **Tailwind CSS** 🎨: برای طراحی رابط کاربری
+- **TypeScript** 
+
+## 🚀 نحوه راه‌اندازی
+
+### 📋 پیش‌نیازها
+- Node.js نسخه 18 یا بالاتر
+- یک کلید API از [Google AI Studio](https://aistudio.google.com/)
+
+### 📥 مراحل نصب
+
+1. کلون کردن ریپو:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/your-username/sentiment-analysis-app.git
+cd sentiment-analysis-app
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. نصب وابستگی‌ها:
+```bash
+npm install
+# یا
+yarn install
+# یا
+pnpm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. ایجاد فایل `.env.local` و اضافه کردن کلید API:
+```
+GOOGLE_GENERATIVE_AI_API_KEY=your_api_key_here
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. اجرای پروژه در محیط توسعه:
+```bash
+npm run dev
+# یا
+yarn dev
+# یا
+pnpm dev
+```
 
-## Learn More
+5. مرورگر را باز کرده و به آدرس `http://localhost:3000` بروید.
 
-To learn more about Next.js, take a look at the following resources:
+## نحوه دریافت کلید API
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+برای استفاده از این اپلیکیشن، نیاز به یک کلید API از Google AI Studio دارید:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. به [Google AI Studio](https://aistudio.google.com/) بروید
+2. یک حساب کاربری ایجاد کنید یا وارد شوید
+3. به بخش API Keys بروید و یک کلید جدید ایجاد کنید
+4. کلید را در فایل `.env.local` خود قرار دهید
 
-## Deploy on Vercel
+## نکته مهم درباره فونت‌ها
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+فونت یکان استفاده شده در این پروژه دارای لایسنس تجاری است و در ریپو گیت قرار داده نشده است. برای استفاده از این پروژه می‌توانید:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. فونت یکان را از [فونت ایران](https://fontiran.com) خریداری کنید
+2. یا از فونت‌های رایگان فارسی دیگر مانند وزیر استفاده کنید
+
+
+
+## نحوه کارکرد
+
+1. کاربر متن خود را در کادر ورودی وارد می‌کند (حداکثر ۲۰۰۰ کاراکتر)
+2. با کلیک بر روی دکمه "تحلیل احساسات متن"، درخواست به API ارسال می‌شود
+3. API با استفاده از Vercel AI SDK و مدل Google Gemini 2.0 Flash، متن را تحلیل می‌کند
+4. نتایج به صورت ساختاریافته (JSON) برگردانده می‌شوند
+5. نتایج تحلیل شامل احساس کلی، میزان اطمینان، توضیحات و عبارات کلیدی به کاربر نمایش داده می‌شوند
+
+## لایسنس
+
+این پروژه تحت لایسنس MIT منتشر شده است.
+
+</div>
